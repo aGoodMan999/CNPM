@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/slider_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image_container"
+    >
+        <ImageView
+                android:id="@+id/slide_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+        </ImageView>
+    </FrameLayout>
+
+
+    <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="90dp"
+            android:layout_alignParentBottom="true"
+    >
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Title"
+                      android:textColor="@color/primary"
+                      android:fontFamily="@font/myfont"
+                      android:textStyle="bold"
+                      android:textSize="20dp"
+                      android:id="@+id/movie_title" android:layout_marginTop="7dp" android:layout_marginStart="7dp"
+                      android:layout_marginEnd="7dp" android:layout_marginBottom="7dp"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/movie_rating"
+                      android:text="(2021)"
+                      android:textSize="13dp"
+                      android:fontFamily="@font/myfont"
+                      android:id="@+id/movie_year" android:layout_marginTop="7dp" android:layout_marginStart="7dp"
+                      android:layout_marginEnd="7dp" android:layout_marginBottom="7dp"/>
+            <com.chaek.android.RatingBar android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:layout_below="@id/movie_title"
+                                         android:layout_marginLeft="5dp"
+                                         android:layout_gravity="center_vertical"
+                                         app:rating_star_height="15dp"
+                                         app:rating_star_width="15dp"
+                                         app:rating_flag="FIVE"
+                                         app:rating_star_empty_color="#7E7C7C"
+                                         app:rating_start_count="4"
+                                         android:id="@+id/movie_rating"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_toRightOf="@id/movie_rating"
+                      android:layout_alignBottom="@id/movie_rating"
+                      android:layout_gravity="bottom"
+                      android:text="7.9"
+                      android:layout_marginLeft="8dp"
+                      android:textSize="14dp"
+                      android:fontFamily="@font/myfont"
+                      android:id="@+id/movie_point"
+                      android:layout_marginBottom="-8dp"
+                      android:textStyle="bold"
+                      android:textColor="@color/accent"/>
+        </RelativeLayout>
+    </eightbitlab.com.blurview.BlurView>
+</RelativeLayout>
+
+
